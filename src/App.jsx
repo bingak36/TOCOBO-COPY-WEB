@@ -6,7 +6,6 @@ import Footer from './components/Footer'
 import Follow from './sections/Follow'
 import Collection from './sections/Collection'
 import SkinCare from './sections/SkinCare'
-import Review from './sections/Review'
 import Instargram from './sections/Instargram'
 import TopBanner from './components/TopBanner'
 import FixedTopBtn from './components/FixedTopBtn'
@@ -18,6 +17,21 @@ function App() {
 
   const [topBanner, setTopBanner] = useState('')
   const [isScrolled, setIsScrolled] = useState(false)
+  const [mNavOpen, setMNavOpen] = useState(false)
+
+  const handleMNavOpen = () => setMNavOpen(true)
+  const handleMNavClose = () => setMNavOpen(false)
+
+  useEffect(() => {
+    AOS.init({
+      duration: 400,
+      easing: 'ease',
+    })
+  }, [])
+
+  useEffect(() => {
+    document.body.style.overflow = mNavOpen ? 'hidden' : ''
+  }, [mNavOpen])
 
   useEffect(()=>{
 
@@ -39,8 +53,12 @@ function App() {
   return (
     <div className={`app-container ${topBanner} ${isScrolled? 'scrolled':''} `}>
       <FixedTopBtn isScrolled={isScrolled} />
-      <TopBanner  onClick={upTopBanner}/>
-      <Header />
+      <TopBanner onClick={upTopBanner} />
+      <Header
+        mNavOpen={mNavOpen}
+        onNavOpen={handleMNavOpen}
+        onNavClose={handleMNavClose}
+      />
       <main>
         <section id="hero" className='section'>
           <Hero />
@@ -53,9 +71,6 @@ function App() {
         </section>
         <section id="skincare" className='section'>
           <SkinCare />
-        </section>
-        <section id="review" className='section'>
-          <Review />
         </section>
         <section id="instagram" className='section'>
           <Instargram />

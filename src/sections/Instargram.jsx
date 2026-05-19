@@ -5,23 +5,24 @@ import './style/Instargram.scss'
 
 const Instagram = () => {
   return (
-    <div className='inner inner-instar'>
-      <div className='instar-text'>
+    <div className='inner instar-inner'>
+      <div className="t-wrap">
         <h2 className="tit">Instagram</h2>
-        <p>@tocobo_official</p>
+        <p className="txt">@tocobo_official</p>
       </div>
-      <div className="instar-wrap">
-        <div className="instar-grid">
-          {Instar.map((item) => (
-            <a key={item.id} href={item.link} className="instar-item">
-              <div className="image-wrapper">
-                <img src={item.image} alt={item.alt} />
-                <div className="overlay"></div>
-              </div>
+      <ul className="instar-list">
+        {Instar.map((item) => (
+          <li key={item.id}>
+            <a
+              href={item.link}
+              aria-label={item.alt}
+              style={{ backgroundImage: `url(${item.image})` }}
+            >
+              {item.id}
             </a>
-          ))}
-        </div>
-      </div>
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }

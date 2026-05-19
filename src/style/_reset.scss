@@ -38,7 +38,8 @@ html {
 body {
     font-family: system-ui, -apple-system, Segoe UI, Roboto, Apple SD Gothic Neo, Noto Sans KR, sans-serif;
     background-color: var(--bg);
-    color: var(--fg)
+    color: var(--fg);
+    overflow-x: hidden;
 }
 
 * {
@@ -67,6 +68,10 @@ button {
 
 section {
     min-height: 100vh;
+
+    @media screen and (max-width:1111px) {
+        min-height: auto;
+    }
 }
 
 ul,

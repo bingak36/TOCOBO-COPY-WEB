@@ -23,6 +23,20 @@ const SkinCare = () => {
           <Swiper 
           slidesPerView={2}
           spaceBetween={30}
+          breakpoints={{
+            0: {
+              slidesPerView: 1.15,
+              spaceBetween: 16,
+            },
+            600: {
+              slidesPerView: 1.6,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+          }}
           loop={true}
           className="skincare-slider">
             {skincare.map((sl)=>(

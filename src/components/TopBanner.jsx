@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
-const TopBanner = ({ onClose }) => {
+const TopBanner = ({ onClick }) => {
 
   const tbData = headerData.topBanner.items
   const closeBtn = headerData.topBanner.closeIcon
@@ -29,7 +29,7 @@ const TopBanner = ({ onClose }) => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="closeBtn" onClick={onClose}>
+      <div className="closeBtn" onClick={onClick}>
         <img src={closeBtn} alt="close btn" />
       </div>
     </div>

@@ -1,6 +1,18 @@
 .hero-container {
     height: 90rem;
 
+    @media screen and (max-width:1111px) {
+        height: 72rem;
+    }
+
+    @media screen and (max-width:599px) {
+        height: 64rem;
+    }
+
+    h2.tit {
+        font-size: clamp(5rem, 6vw, 7.3rem);
+    }
+
     .swiper {
         height: 100%;
 
@@ -16,10 +28,35 @@
             align-items: center;
             justify-content: flex-start;
             max-width: 164rem;
+            min-height: 100%;
+
+            @media screen and (max-width:1111px) {
+                .t-wrap {
+                    position: absolute;
+                    left: 2rem;
+                    bottom: 12.5rem;
+                }
+            }
+
+            @media screen and (max-width:599px) {
+                .t-wrap {
+                    a.btn {
+                        display: none;
+                    }
+                }
+            }
 
             p.txt {
                 font-size: 2.1rem;
                 margin-top: 4rem;
+
+                @media screen and (max-width:1111px) {
+                    margin: 2rem 0 0;
+                }
+
+                @media screen and (max-width:599px) {
+                    margin: 1rem 0 0;
+                }
             }
         }
 
@@ -60,6 +97,12 @@
                 text-align: center;
                 justify-content: center;
 
+                @media screen and (max-width:1111px) {
+                    .t-wrap {
+                        text-align: left;
+                    }
+                }
+
                 h2.tit {
                     color: var(--main-slider03-tit)
                 }
@@ -97,6 +140,12 @@
         display: flex;
         align-items: center;
         gap:2rem;
+
+        @media screen and (max-width:1111px) {
+            left: 2rem;
+            bottom: 3.9rem;
+        }
+
         .arr-prev,
         .arr-next {
             width: 5rem;
@@ -108,17 +157,17 @@
             font-size: 0;
         }
         .arr-prev{
-            background-image: url(/img/icon_main_ban_arrow_prev.svg);
+            background-image: url(/img/r_arrow_prev.svg);
         }
         .arr-next{
-            background-image: url(/img/icon_main_ban_arrow_next.svg);
+            background-image: url(/img/r_arrow_next.svg);
         }
         .swiper-pagination-fraction{
             width: 5rem;
             height: 5rem;
             position: relative;
             font-size: 0;
-            color: var(--bg);
+            color: var(--primary);
             .swiper-pagination-current{
                 font-size: 2.2rem;
                 position: absolute;
@@ -138,7 +187,7 @@
                 position: absolute;
                 width: 1px;
                 height: 50px;
-                background-color: var(--bg);
+                background-color: var(--primary);
                 left: 10%;
                 top: 40%;
                 transform: rotate(45deg) translate(-50%,-50%);

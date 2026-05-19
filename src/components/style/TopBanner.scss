@@ -7,22 +7,28 @@
     height: 4rem;
     color: var(--bg);
     text-align: center;
-    align-content: center;
-    z-index: 6;
+    z-index: 5;
+    transition: all .3s;
+
     .swiper {
         height: 100%;
+        z-index: 0;
+
+        a {
+            display: block;
+            height: 100%;
+            align-content: center;
+            font-size: 1.3rem;
+        }
     }
-    .swiper-slide {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+
+    .closeBtn {
+        z-index: 3;
+        position: absolute;
+        right: 2rem;
+        width: 1.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
     }
-}
-.closeBtn {
-    position: absolute;
-    right: 2rem;
-    width: 1.5rem;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
 }

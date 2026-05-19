@@ -35,7 +35,7 @@ export const footerMenus = [
     },
     { 
         title: 'COMMUNITY', 
-        items: [{ label: 'Notice', href: '#' }, { label: 'Review', href: '#' }, { label: 'Event', href: '#' }] 
+        items: [{ label: 'Notice', href: '#' }, { label: 'Event', href: '#' }] 
     },
     { 
         title: 'MEMBERSHIP', 
