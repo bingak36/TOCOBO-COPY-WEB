@@ -1,5 +1,5 @@
 import React from 'react'
-import {helloData} from '../util/Hello'
+import {helloData} from '../util/hello'
 import './style/Hello.scss'
 const Hello = () => {
   return (

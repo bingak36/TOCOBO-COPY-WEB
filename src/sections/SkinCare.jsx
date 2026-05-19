@@ -1,5 +1,5 @@
 import React from 'react'
-import skincare from '../util/skincare'
+import skincare from '../util/Skincare'
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import './style/SkinCare.scss'

@@ -1,5 +1,5 @@
 import React from 'react'
-import './style/fixedTopBtn.scss'
+import './style/FixedTopBtn.scss'
 import { useSmoothScroll } from '../hooks/useSmoothScroll'
 const FixedTopBtn = () => {
     const scrollTo = useSmoothScroll()

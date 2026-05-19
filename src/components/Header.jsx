@@ -2,7 +2,7 @@ import React from 'react'
 import Nav from './Nav'
 import Util from './Util'
 import {headerData} from '../util/header'
-import './style/header.scss'
+import './style/Header.scss'
 import Mnav from './Mnav'
 
 const Header = ({ mNavOpen, onNavOpen, onNavClose }) => {
