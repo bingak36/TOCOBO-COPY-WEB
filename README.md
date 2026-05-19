@@ -1,18 +1,4 @@
-# React + Vite
+ 이 프로젝트는 TOCOBO 브랜드 웹사이트를 React로 구현한 클론 프로젝트입니다.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
-
-Note: This will impact Vite dev & build performances.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+  Vite 기반으로 제작되었고, 메인 배너 슬라이드, 제품 컬렉션, 스킨케어 섹션, 인스타그램 영역, 반응형 메뉴 등을 포함한 브랜드 랜딩 페
+  이지 형태의 웹사이트입니다. 스타일은 SCSS로 구성했고, Swiper를 사용해 슬라이더 UI를 구현했습니다.
